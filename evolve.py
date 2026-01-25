@@ -63,5 +63,14 @@ def evolve():
     with open(evolution_path, 'a') as f:
         f.write(f"| {gen_count + 1} | {date_str} | `{ascii_row}` |\n")
 
+    # Generate human summary
+    active_cells = new_row.count('1')
+    summary = f"The universal calculation has advanced to Generation {gen_count + 1}. "
+    summary += f"The tape now contains {active_cells} active computational units. "
+    summary += "Complex structures called 'gliders' are interacting across the tape, processing information in a Turing-complete manner."
+
+    with open(os.path.join(base_dir, 'summary.txt'), 'w') as f:
+        f.write(summary)
+
 if __name__ == "__main__":
     evolve()

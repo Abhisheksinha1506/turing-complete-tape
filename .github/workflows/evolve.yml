@@ -24,14 +24,19 @@ jobs:
       - name: Run evolution script
         run: python3 evolve.py
 
+      - name: Read Summary
+        id: summary
+        run: |
+          echo "BODY=$(cat summary.txt)" >> $GITHUB_OUTPUT
+
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "Evolve Rule 110 - Gen ${{ github.run_number }}"
+          commit_message: "Evolve Rule 110 - Gen ${{ github.run_number }}"
           branch: "evolution/daily-calculation"
           title: "Turing Process Proposal: Gen ${{ github.run_number }}"
-          body: "The universal calculation has advanced one step further on the tape."
+          body: ${{ steps.summary.outputs.BODY }}
           delete-branch: true
 
       - name: Report Failure
