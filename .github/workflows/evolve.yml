@@ -2,7 +2,7 @@ name: Evolve Rule 110
 
 on:
   schedule:
-    - cron: '30 0 * * *' # Run daily at 00:30
+    - cron: '30 */6 * * *' # Run every 6 hours (staggered)
   workflow_dispatch:
 
 jobs:
