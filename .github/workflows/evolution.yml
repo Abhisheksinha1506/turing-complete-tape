@@ -1,5 +1,5 @@
 
-concurrency: rule-110-ca-evolution
+concurrency: evolution-${{ github.workflow }}
 
 name: Daily Evolution
 
