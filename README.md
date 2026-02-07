@@ -4,7 +4,7 @@
 
 ### 📢 Latest Status
 <!-- LATEST_STATUS_START -->
-> The universal calculation has advanced to Generation 78. The tape now contains 26 active computational units. Complex structures called 'gliders' are interacting across the tape, processing information in a Turing-complete manner.
+> The universal calculation has advanced to Generation 79. The tape now contains 20 active computational units. Complex structures called 'gliders' are interacting across the tape, processing information in a Turing-complete manner.
 <!-- LATEST_STATUS_END -->
 
 ### 📖 The Analogy
